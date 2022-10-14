@@ -1,10 +1,16 @@
-body{
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
 }
 
-header{
-    display:flex;
+header {
+    display: flex;
     justify-content: space-between;
     background-color: rgb(19, 19, 19);
     color: rgb(248, 236, 236);
@@ -17,8 +23,8 @@ header h1 {
     margin: 1.5rem 0;
 }
 
-.cartcontainer{
-    display:flex;
+.cartcontainer {
+    display: flex;
     padding: 2rem 0;
     color: white;
 }
@@ -34,12 +40,6 @@ header h1 {
     width: 1.5rem;
 }
 
-main{
+main {
     padding: 0 2rem;
 }
-*{
-margin: 0;
-padding: 0;
-box-sizing: border-box;
-}
-
