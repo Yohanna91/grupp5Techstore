@@ -11,15 +11,13 @@ body {
 header {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     background-color: rgb(19, 19, 19);
     color: rgb(248, 236, 236);
     padding: 0 2rem;
-    position: fixed;
-    
+    position: sticky;
+    top: 0;
     width: 100%;
-}
-a {
-    text-decoration: none;
 }
 
 header h1 {
@@ -31,210 +29,61 @@ header h1 {
 
 .cartcontainer {
     display: flex;
-    padding: 2rem 0;
-    color: white;
-}
-
-.cartcontainer p {
-    margin-block-start: 0;
-    margin-block-end: 0;
-    margin-right: 0.5rem;
-}
-
-.cartcontainer svg {
-    fill: white;
-    width: 1.5rem;
-}
-
-main {
-    padding: 0 2rem;
-}
-
-      /****START VIEW****/
-
-#products{
-    /*background-color: purple;*/
-    display: flex;
-    flex-direction: column;
     align-items: center;
+    gap: 1rem;
+}
+
+.cartamount {
+    color: #fff;
+    font-size: 2rem;
+    text-decoration: none;
+}
+
+.cartIcon {
+    color: #fff;
+    font-size: 1.8rem;
+    transform: translateY(-5px);
+}
+
+.container {
+    display: flex;
     justify-content: center;
 }
 
-#iphone{
-    /*background-color: aquamarine;*/
-    margin-bottom: 40px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-top: 80px;
-}
 
-#lgv{
-    /*background-color: aquamarine;*/
-    margin-top: 20px;
-    margin-bottom: 40px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-#oneplus{
-    /*background-color: aquamarine;*/
-    margin-top: 20px;
-    margin-bottom: 40px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-#galaxy{
-    /*background-color: aquamarine;*/
-    margin-top: 20px;
-    margin-bottom: 40px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-h2{
-    /*background-color: red;*/
-    font-size: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 10px;
-}
-
-h4{
-    /*background-color: yellow;*/
-    display: flex;
-    justify-content: center;
-    font-size: 20px;
-}
-
-button{
-    background-color: cornflowerblue;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 20rem;
-    height: 3rem;
-    border: solid 2px black;
-    border-radius: 5px;
-    margin-bottom: 4rem;
-    margin-top: 2rem;
-    font-size: 20px;
-
-}
-
-img{
-    height: 600px; 
-    width: 300px;
-}
-
-/***CART-VIEW***/
-
-
-
-h3{
-    background-color: pink;   
-    display: flex;
-    justify-content: center;
-    padding-top: 150px;
-    font-size: 40px;
-}
-
-.products{
-    background-color: red;
-    margin-top: 50px;
-    display: flex;
-    justify-content: center;
-   
-    
-}
-
-img{             
-    height: 200px;
-    width: 100px;                                              
-}
-
-
-.iphone{
-   background-color: aquamarine;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border: solid 2px cornflowerblue;
-    border-radius: 20px;
-    margin-right: 10px;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-top: 10px;
-}
-
-.lgv{
-    background-color: aquamarine;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border: solid 2px cornflowerblue;
-    border-radius: 20px;
-    margin-left: 10px;
-    padding-right: 10px;
-    padding-left: 10px;
-    padding-top: 10px;
-    
- }
-
- .oneplus{
-    background-color: aquamarine;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border: solid 2px cornflowerblue;
-    border-radius: 20px;
-    margin-right: 10px;
-    margin-left: 10px;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-top: 10px;
- }
-
- .galaxy{
-    background-color: aquamarine;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border: solid 2px cornflowerblue;
-    border-radius: 20px;
-    margin-right: 10px;
-    margin-left: 10px;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-top: 10px;
-    
- }
-
- .totalsum{
-    background-color: blue;
+#products img {
+    width: 200px;
     height: 300px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
- }
-
- p{
-    font-size: 30px;
-
 }
 
-.removebtn{
-    background-color: orange;
-    width: 60%;
-    border-radius: 10px;
-    display: flex;
-    
-    
+.product {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.product h2 {
+    font-size: 2rem;
+}
+
+.product h4 {
+    padding: 1rem 0;
+}
+
+.product .price {
+    font-size: 1.2rem;
+}
+
+#add-to-cart {
+    background-color: cornflowerblue;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    text-align: center;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+#add-to-cart:hover {
+    background-color: rgb(123, 162, 235);
 }
