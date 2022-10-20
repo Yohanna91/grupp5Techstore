@@ -73,8 +73,8 @@ header h1 {
     font-size: 1.2rem;
 }
 
-#add-to-cart {
-    background-color: cornflowerblue;
+#add-to-cart,
+#remove-from-cart {
     color: #fff;
     padding: 0.5rem 1rem;
     text-align: center;
@@ -84,6 +84,32 @@ header h1 {
     cursor: pointer;
 }
 
+#remove-from-cart {
+    background-color: indianred;
+}
+#add-to-cart {
+    background-color: cornflowerblue;
+}
+
 #add-to-cart:hover {
     background-color: rgb(123, 162, 235);
+}
+
+.totalsum {
+    width: 200px;
+    margin: 0 auto;
+    text-align: center;
+    margin: 1rem 0;
+}
+
+.totalsum p {
+    font-size: 1.2rem;
+}
+
+.totalsum button {
+    padding: 0.5rem 1rem;
+    background-color: #222;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
 }

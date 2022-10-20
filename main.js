@@ -48,17 +48,21 @@ function addProductsToWebpage() {
             const productName = button.parentElement.firstChild.nextSibling.innerText
             // Gå igenom listan av alla produkter (listofProducts) och filtrera bort allt förutom
             // den produkt man vill ha
-            const foundProduct = listOfProducts.filter(item => item.title == productName)
+            const [ foundProduct ] = listOfProducts.filter(item => item.title == productName)
             
             // Kolla först om kundkorgen existerar i localstorage
             if (!localStorage.getItem("cart")) {
+                // Skapa en tom array om det inte finns något i localstorage
+                const items = []
+                // Lägg till produkten man klickat på
+                items.push(foundProduct)
                 // Om det inte fanns någon "cart" i localStorage så skapar vi en helt ny med vår product
-                localStorage.setItem("cart", JSON.stringify(foundProduct))
+                localStorage.setItem("cart", JSON.stringify(items))
                 updateCartAmount()
             } else {
                 // Däremot om localStorage har en "cart" redan så ska vi bara lägga till den nya produkten
                 // Hämta den först
-                let cart = JSON.parse(localStorage.getItem("cart"))
+                const cart = JSON.parse(localStorage.getItem("cart"))
                 // Lägg till den nya produkten
                 cart.push(foundProduct);
                 // Uppdatera localStorage
