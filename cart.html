@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src="cart.js" defer></script>
     <title>Cart</title>
 
 </head>
@@ -15,51 +16,24 @@
         <a href="index.html">
             <h1>TechStore</h1>
         </a>
-        <a class="cartcontainer" href="">
-            <p class="cartamount">3</p>
-            <i>
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-                    <!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
-                    <path
-                        d="M24 0C10.7 0 0 10.7 0 24S10.7 48 24 48H76.1l60.3 316.5c2.2 11.3 12.1 19.5 23.6 19.5H488c13.3 0 24-10.7 24-24s-10.7-24-24-24H179.9l-9.1-48h317c14.3 0 26.9-9.5 30.8-23.3l54-192C578.3 52.3 563 32 541.8 32H122l-2.4-12.5C117.4 8.2 107.5 0 96 0H24zM176 512c26.5 0 48-21.5 48-48s-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48zm336-48c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48z" />
-                </svg>
+        <a class="cartcontainer" href="./cart.html">
+           <p class="cartamount">0</p> 
+           <i class="cartIcon">
+                🛒
             </i>
         </a>
     </header>
-    <main>
-        <div class="wagon">
-            <h3>(icon)Kundvagn</h3>
+   
+    <main class="container">
+        <!-- Add the content of your site here via javascript -->
+        <div id="products">
+        <!-- Products goes here -->
         </div>
-    <div class="products">
-         <div class="iphone">
-                <img src="assets/iPhoneX.png" alt="Det här är en iphone X">
-                <h2>iphone X</h2>
-                <h4>11495 kr</h4>
-                <button class="removebtn">(icon)Ta bort</button>
-            </div>
-            <div class="oneplus">
-                <img src="assets/OnePlus5.png" alt="Det här är en One Plus 5">
-                <h2>One plus 5</h2>
-                <h4>4995 kr</h4>
-                <button class="removebtn"> (icon)Ta bort</button>
-            </div> 
-            <div class="galaxy">
-                <img src="assets/SamsungS8.png" alt="Det här är en Galaxy S8">
-                <h2>Galaxy S8</h2>
-                <h4>7990 kr</h4>
-                <button class="removebtn">(icon)Ta bort</button>
-            </div>
-            <div class="lgv">
-                <img src="assets/LGV30.png" alt="Det här är en LGV 30">
-                <h2>LGV 30</h2>
-                <h4>7495 kr</h4>
-                <button class="removebtn">(icon)Ta bort</button>
-            </div>
-         <div>
-        </main>
-        <div class="totalsum">
-            <p>Totalpris -- kr</p>
-            <button>(icon) Sluta ditt köp</button>
-        </div>
+    </main>
+   
+    <div class="totalsum">
+            <p>Totalpris <span class="totalamount">0</span> kr</p>
+            <button class="complete_purchase">✅ Slutför ditt köp</button>
+    </div>
     </body>
 </html>
