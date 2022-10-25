@@ -37,7 +37,7 @@ function addProductsToWebpage() {
             <h4>${product.description}</h4>
             <img src="/assets/${product.image}" alt="${product.description}">
             <h4 class="price">${product.price} kr</h4>
-            <button id="add-to-cart">🛒 Lägg till i kundvagnen</button>
+            <button id="add-to-cart"><i class="fa-solid fa-cart-arrow-down"></i> Lägg till i kundvagnen</button>
         </div>
         `
     })
