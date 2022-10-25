@@ -51,7 +51,7 @@ function addProductsToWebpage() {
             localStorage.setItem("cart", JSON.stringify(filtreradLista))
             addProductsToWebpage()
             updateCartAmount()
-            
+            totalSumInCart()
     
         })
    })
