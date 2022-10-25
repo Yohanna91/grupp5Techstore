@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <script src="cart.js" defer></script>
+    <script src="https://kit.fontawesome.com/97112cb48b.js" crossorigin="anonymous"></script>
     <title>Cart</title>
 
 </head>
@@ -17,23 +18,26 @@
             <h1>TechStore</h1>
         </a>
         <a class="cartcontainer" href="./cart.html">
-           <p class="cartamount">0</p> 
+           <p class="cartamount"></p> 
            <i class="cartIcon">
-                🛒
+            <i class="fa-solid fa-cart-shopping"></i>
             </i>
         </a>
     </header>
-   
-    <main class="container">
+   <div class="cart_header"> 
+        <h1><i class="fa-solid fa-cart-shopping"></i> Kundvagn</h1>
+    </div>
+    <main class="container_cart">
         <!-- Add the content of your site here via javascript -->
         <div id="products">
         <!-- Products goes here -->
         </div>
     </main>
+    
    
     <div class="totalsum">
-            <p>Totalpris <span class="totalamount">0</span> kr</p>
-            <button class="complete_purchase">✅ Slutför ditt köp</button>
+            <p>Totalt pris <span class="totalamount">0</span> kr</p>
+            <button class="complete_purchase"><i class="fa-sharp fa-solid fa-check"></i> Slutför ditt köp</button>
     </div>
     </body>
 </html>
