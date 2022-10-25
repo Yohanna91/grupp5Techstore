@@ -1,3 +1,4 @@
+// Globala variables
 var listOfProducts;
 var complete_purchase
 const cartproducts = document.querySelector(".container_cart")
@@ -24,7 +25,7 @@ function initSite() {
 
 
 function addProductsToWebpage() {
-    const listOfProducts = JSON.parse(localStorage.getItem("cart"))
+    listOfProducts = JSON.parse(localStorage.getItem("cart"))
     cartproducts.innerHTML =  ""
     listOfProducts.forEach((product) => {
         cartproducts.innerHTML += `
