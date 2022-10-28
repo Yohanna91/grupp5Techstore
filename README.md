@@ -1,5 +1,7 @@
 ﻿# grupp5Techstore
  
+ Vi har byggt en liten webbshop som säljer mobiltelefoner.
+ 
  Vi har gjort följande krav:
  
  * Vi har en fixerad header med en titel och en kundvagn som är klickbar.
