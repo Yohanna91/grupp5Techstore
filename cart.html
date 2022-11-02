@@ -6,7 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <script src="cart.js" defer></script>
     <script src="https://kit.fontawesome.com/97112cb48b.js" crossorigin="anonymous"></script>
     <title>Cart</title>
 
@@ -15,7 +14,7 @@
 <body onload="initSite()">
     <header>
         <a href="index.html">
-            <h1>TechStore</h1>
+            <h1 id="logo">TechStore</h1>
         </a>
         <a class="cartcontainer" href="./cart.html">
            <p class="cartamount"></p> 
@@ -39,5 +38,7 @@
             <p>Totalt pris <span class="totalamount">0</span> kr</p>
             <button class="complete_purchase"><i class="fa-sharp fa-solid fa-check"></i> Slutför ditt köp</button>
     </div>
+
+    <script src="./cart.js" defer></script>
     </body>
 </html>

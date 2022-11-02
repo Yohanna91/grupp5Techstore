@@ -19,5 +19,35 @@
         "description": "Super nice and beautiful smartphone from LG.",
         "image": "LGV30.png",
         "price": 7495
-    }
+    },{
+            "title": "Pixel 6a",
+            "description": "Googles most prisworth phone",
+            "image": "Pixel6a.png",
+            "price": 3240
+           },{
+            "title": "Xperia 5 IV",
+            "description": "Now with better camera",
+            "image": "Xperia5IV.png",
+            "price": 6480
+           },{
+            "title": "iphone 14",
+            "description": "Dust- and waterproof",
+            "image": "iPhone14.png",
+            "price": 9588
+        },{
+            "title": "iphone 14 PRO",
+            "description": "A magical new way to interact with iPhone.",
+            "image": "iPhone14PRO.png",
+            "price": 11988
+        },{
+            "title": "Galaxy S22",
+            "description": "The newest and most exclusive phone from Samsung",
+            "image": "GalaxyS22.png",
+            "price": 9990
+        },{
+            "title": "iPhone SE",
+            "description": "The latest version",
+            "image": "iPhoneSE.png",
+            "price": 6495
+        }
 ]
