@@ -58,7 +58,7 @@ header a{
         /***START VIEW***/
 
 #products img {
-    width: 250px;
+    /*width: 250px;*/
     height: 450px;
 }
 
@@ -91,9 +91,6 @@ header a{
     border-radius: 4px;
     font-size: 1.2rem;
     cursor: pointer;
-    /*display: flex;
-    justify-content: space-around;
-    align-items: center;*/
 }
 
 #add-to-cart {
@@ -110,6 +107,10 @@ header a{
 
         /***CART-VIEW****/
 
+main /*for 10 phones*/ {
+    display: flex;
+    flex-wrap: wrap;
+}
 
 #remove-from-cart {
     background-color: indianred;
@@ -142,9 +143,6 @@ header a{
     border-radius: 4px;
     color: #fff;
     margin-top: 2rem;
-    
-    
-    
 }
 
 .cart_header h1{
@@ -172,9 +170,10 @@ header a{
     justify-content: center;
     padding-bottom: 20px;
     padding-top: 10px;
+    margin-top: 20px;
     margin-left: 10px;
     height: 300px;
-    width: 150px;
+    /*width: 150px;*/
     border: 2px solid cornflowerblue;
     border-radius: 10px;
 }
@@ -219,3 +218,18 @@ main{
 width: 20rem;
 }
 }
+
+        /***FOR TABLETS (10 PHONE)***/
+    @media only screen and (max-width: 900px) {
+        *{
+            margin: auto;
+            padding: auto;
+            box-sizing: border-box;
+        }
+        main{
+            display: flex;
+            flex-wrap: wrap;
+        }
+     }
+     
+    

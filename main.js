@@ -24,6 +24,9 @@ function updateCartAmount() {
     // Hämta de som finns i localstorage och konvertera det från string till javascript objekt
     const cartItemsInLocalStorage = JSON.parse(localStorage.getItem("cart"))
     // Antalet produkter i localstorage "cart"
+    
+    //LÄGGA DET HÄR I EN IF SATS FÖR ATT FÅ BORT FELMEDDELANDET??
+
     cartamount.innerText = cartItemsInLocalStorage.length
 }
 
