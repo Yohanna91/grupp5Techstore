@@ -1,139 +1,196 @@
-        /***ALL SIDES***/
+/***ALL SIDES***/
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: rgb(19, 19, 19);
-    color: rgb(248, 236, 236);
-    padding: 0 2rem;
-    position: sticky;
-    top: 0;
-    width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(19, 19, 19);
+  color: rgb(248, 236, 236);
+  padding: 0 2rem;
+  position: sticky;
+  top: 0;
+  width: 100%;
 }
 
-header h1 {
-    margin-block-start: 0;
-    margin-block-end: 0;
-    margin: 1.5rem 0;
-    color: rgb(245, 235, 235);
+#logo {
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin: 1.5rem 0;
+  color: rgb(245, 235, 235);
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-header a{
-    text-decoration: none;
+header a {
+  text-decoration: none;
 }
 .cartcontainer {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 }
 
 .cartamount {
-    color: #fff;
-    font-size: 2rem;
-    text-decoration: none;
+  color: #fff;
+  font-size: 2rem;
+  text-decoration: none;
 }
 
 .cartIcon {
-    color: #fff;
-    font-size: 1.8rem;
-    transform: translateY(-5px);
+  color: #fff;
+  font-size: 1.8rem;
+  transform: translateY(-5px);
 }
 
 .container {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
-        /***START VIEW***/
+/* For the login stuff */
+#inloggad {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+#inloggad input[type="submit"] {
+  padding: 0.5rem 1rem;
+  background-color: #fff;
+  color: #000;
+  font-weight: 600;
+  border-radius: 5px;
+}
+#inloggad h1 {
+  font-size: 24px;
+}
+#inloggad input[type="submit"]:hover {
+  background-color: rgb(198, 55, 55);
+  color: #fff;
+  transition: all 400ms ease;
+}
+#inloggad #inloggadsom {
+  text-transform: capitalize;
+}
+
+/***START VIEW***/
 
 #products img {
-    /*width: 250px;*/
-    height: 450px;
+  width: 250px;
+  height: 400px;
 }
 
 .product {
-    text-align: center;
-    margin: 2rem 0;
-    height: 900px 
+  text-align: center;
+  margin: 2rem 0;
+  width: 300px;
+  height: 800px;
 }
 
 .product h2 {
-    font-size: 2rem;
-    font-size: 50px; 
+  font-size: 2rem;
+  font-size: 50px;
 }
 
 .product h4 {
-    padding: 1rem 0;
-    font-size: 16px;
+  padding: 1rem 0;
+  font-size: 16px;
 }
 
 .product .price {
-    font-size: 1.2rem;
+  font-size: 1.2rem;
 }
 
 #add-to-cart,
 #remove-from-cart {
-    color: #fff;
-    padding: 0.5rem 1rem;
-    text-align: center;
-    border: none;
-    border-radius: 4px;
-    font-size: 1.2rem;
-    cursor: pointer;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  text-align: center;
+  border: none;
+  border-radius: 4px;
+  font-size: 1.2rem;
+  cursor: pointer;
 }
 
 #add-to-cart {
-    background-color: cornflowerblue;
-    border-radius: 10px;
-    width: 20rem;
-    height: 3.5rem;
+  background-color: cornflowerblue;
+  border-radius: 10px;
+  width: 20rem;
+  height: 3.5rem;
 }
 
 #add-to-cart:hover {
-    background-color: rgb(123, 162, 235);
+  background-color: rgb(123, 162, 235);
 }
 
+#my-page {
+  background-color: #f1f1f1;
+  width: 800px;
+  margin-top: 3rem;
+  padding: 1rem;
+  border-radius: 5px;
+  text-align: center;
+  line-height: 160%;
+}
 
-        /***CART-VIEW****/
+#my-page p {
+  margin-top: 0.5rem;
+}
 
-main /*for 10 phones*/ {
-    display: flex;
-    flex-wrap: wrap;
+#remove-order {
+  padding: 0.5rem 1rem;
+  background-color: rgb(209, 59, 59);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  margin-top: 1rem;
+  cursor: pointer;
+}
+
+#felmeddelande {
+  color: red;
+  transform: translateY(-10px);
+}
+
+/***CART-VIEW****/
+main {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 #remove-from-cart {
-    background-color: indianred;
-    margin-top: 30px;
+  background-color: indianred;
+  margin-top: 30px;
 }
 
 .totalsum {
-    flex-direction: column;
-    width: 200px;
-    text-align: center;
-    margin: 1rem 0;
-    margin-bottom: 10rem;
-    display: block;
-    margin: auto;
-    padding: auto;
-    margin-bottom: 55px;
+  flex-direction: column;
+  width: 200px;
+  text-align: center;
+  margin: 1rem 0;
+  margin-bottom: 10rem;
+  display: block;
+  margin: auto;
+  padding: auto;
+  margin-bottom: 55px;
 }
 
 .totalsum p {
-    font-size: 20px;
-   font-weight: bold;
-    
-    
+  font-size: 20px;
+  font-weight: bold;
 }
 
 .totalsum button {
@@ -207,29 +264,96 @@ main{
 }
 
 .cart_header h1 {
+  display: block;
+  margin: auto;
+  padding: 3rem 0;
+  text-align: center;
+  font-size: 60px;
+  width: 500px;
+}
+
+.container_cart {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 45px;
+}
+
+.product_cart {
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 20px;
+  padding-top: 10px;
+  margin-top: 20px;
+  margin-left: 10px;
+  margin-top: 20px;
+  height: 300px;
+  /*width: 150px;*/
+  border: 2px solid cornflowerblue;
+  border-radius: 10px;
+}
+
+.product_cart img {
+  height: 10rem;
+}
+
+/***MOBILE DEVICE***/
+
+@media only screen and (max-width: 500px) {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  main {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .product_cart {
+    width: 200px;
+    margin-top: 20px;
+    margin-left: 20px;
+  }
+
+  .cart_header h1 {
     width: 100%;
     font-size: 30px;
     margin-top: 40px;
-}
-.container_cart{
+  }
+  .container_cart {
     padding-top: 50px;
-}
-#add-to-cart { 
-width: 20rem;
-}
+  }
+  #add-to-cart {
+    width: 20rem;
+  }
 }
 
-        /***FOR TABLETS (10 PHONE)***/
-    @media only screen and (max-width: 900px) {
-        *{
-            margin: auto;
-            padding: auto;
-            box-sizing: border-box;
-        }
-        main{
-            display: flex;
-            flex-wrap: wrap;
-        }
-     }
-     
-    
+/***FOR TABLETS (10 PHONE)***/
+@media only screen and (max-width: 900px) {
+  * {
+    margin: auto;
+    padding: auto;
+    box-sizing: border-box;
+  }
+  main {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}

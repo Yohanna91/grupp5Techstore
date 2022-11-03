@@ -11,7 +11,6 @@
 
     <!-- Visit www.fontawesome.com on how to add font icons to your project -->
     <!-- Link your stylesheet file/files, do NOT write styles in the html file! -->
-    <script src="./main.js" defer></script>
     <script src="https://kit.fontawesome.com/97112cb48b.js" crossorigin="anonymous"></script>
     
 </head>
@@ -19,14 +18,14 @@
 <body onload="initSite()">
     <header>
         <a href="index.html">
-            <h1>TechStore</h1>
+            <h1 id="logo">TechStore</h1>
         </a>
         <div>
             <!--för inloggninssida-->
             <div id="utloggad">
                 
                 <input type="text" id="namn" /> 
-                <input type="text" id="lösenord" /> 
+                <input type="password" id="lösenord" /> 
                 <input type="submit" value="Logga in" id="loggain"/><br><br>
                 <p id="felmeddelande"></p>
               </div>
@@ -34,13 +33,13 @@
               <div id="registrera">
                 
                 <input type="text" id="register_namn" placeholder="Önskat namn"/>
-                <input type="text" id="register_lösenord" placeholder="Välj ett lösenord"/>
+                <input type="password" id="register_lösenord" placeholder="Välj ett lösenord"/>
                 <input type="submit" value="Registrera" id="registreraknapp" />
               </div>
           
               <div id="inloggad">
-                <input type="submit" value="Logga ut" id="loggaut" />
                 <h1>Du är inloggad som <span id="inloggadsom"></span></h1>
+                <input type="submit" value="Logga ut" id="loggaut" />
               </div>
         </div>
         <a class="cartcontainer" href="./cart.html">
@@ -52,13 +51,20 @@
     </header>
     
     <main class="container">
+        <div id="my-page">
+            <h2>My orders</h2>
+            <p>Items price: <span id="items-price">0</span></p>
+            <p>Items total: <span id="items-total">0</span></p>
+            <button id="remove-order">Remove order</button>
+        </div>
         <!-- Add the content of your site here via javascript -->
         <div id="products">
             <!-- Products goes here -->
         </div>
     </main>
     
-    <script src="/VGpart..js" >0</script>
+    <script src="./main.js" defer></script>
+    <script src="./VGpart.js" defer></script>
 </body>
 
 </html>

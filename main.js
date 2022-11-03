@@ -3,38 +3,45 @@ var cartamount;
 
 /** Get products from the json file and store it in a gobal variable */
 function loadProducts() {
-    fetch("./products.json")
-    .then(response => response.json())
-    .then(data => {
-        listOfProducts = data
-        addProductsToWebpage();
-    })
+  fetch("./products.json")
+    .then((response) => response.json())
+    .then((data) => {
+      listOfProducts = data;
+      addProductsToWebpage();
+    });
 }
 
-
 function initSite() {
-    loadProducts();
-    // Hämta <p> taggen med antalet produkter och uppdatera
-    cartamount = document.querySelector(".cartamount")
-    updateCartAmount()
-    // This would also be a good place to initialize other parts of the UI
+  loadProducts();
+  // Hämta <p> taggen med antalet produkter och uppdatera
+  cartamount = document.querySelector(".cartamount");
+  cartIcon = document.querySelector(".cartIcon");
+  cartIcon.addEventListener("click", (event) => {
+    const inloggad = JSON.parse(localStorage.getItem("inloggad"));
+    if (!inloggad) {
+      event.preventDefault();
+      alert("You need to sign in to continue");
+    }
+  });
+  updateCartAmount();
+  // This would also be a good place to initialize other parts of the UI
 }
 
 function updateCartAmount() {
-    // Hämta de som finns i localstorage och konvertera det från string till javascript objekt
-    const cartItemsInLocalStorage = JSON.parse(localStorage.getItem("cart"))
-    // Antalet produkter i localstorage "cart"
-    
-    //LÄGGA DET HÄR I EN IF SATS FÖR ATT FÅ BORT FELMEDDELANDET??
+  // Hämta de som finns i localstorage och konvertera det från string till javascript objekt
+  const cartItemsInLocalStorage = JSON.parse(localStorage.getItem("cart"));
 
-    cartamount.innerText = cartItemsInLocalStorage.length
+  if (cartItemsInLocalStorage) {
+    // Antalet produkter i localstorage "cart"
+    cartamount.innerText = cartItemsInLocalStorage.length;
+  }
 }
 
 /** Uses the loaded products data to create a visible product list on the website */
 function addProductsToWebpage() {
-    // Check your console to see that the products are stored in the listOfProducts varible.
-    listOfProducts.forEach(product => {
-        products.innerHTML += `
+  // Check your console to see that the products are stored in the listOfProducts varible.
+  listOfProducts.forEach((product) => {
+    products.innerHTML += `
         <div class="product">
             <h2>${product.title}</h2>
             <h4>${product.description}</h4>
@@ -42,37 +49,38 @@ function addProductsToWebpage() {
             <h4 class="price">${product.price} kr</h4>
             <button id="add-to-cart"><i class="fa-solid fa-cart-arrow-down"></i> Lägg till i kundvagnen</button>
         </div>
-        `
-    })
+        `;
+  });
 
-    const addToCartButtons = document.querySelectorAll("#add-to-cart")
-   addToCartButtons.forEach(button => {
-        button.addEventListener("click", () => {
-            const productName = button.parentElement.firstChild.nextSibling.innerText
-            // Gå igenom listan av alla produkter (listofProducts) och filtrera bort allt förutom
-            // den produkt man vill ha
-            const [ foundProduct ] = listOfProducts.filter(item => item.title == productName)
-            
-            // Kolla först om kundkorgen existerar i localstorage
-            if (!localStorage.getItem("cart")) {
-                // Skapa en tom array om det inte finns något i localstorage
-                const items = []
-                // Lägg till produkten man klickat på
-                items.push(foundProduct)
-                // Om det inte fanns någon "cart" i localStorage så skapar vi en helt ny med vår product
-                localStorage.setItem("cart", JSON.stringify(items))
-                updateCartAmount()
-            } else {
-                // Däremot om localStorage har en "cart" redan så ska vi bara lägga till den nya produkten
-                // Hämta den först
-                const cart = JSON.parse(localStorage.getItem("cart"))
-                // Lägg till den nya produkten
-                cart.push(foundProduct);
-                // Uppdatera localStorage
-                localStorage.setItem("cart", JSON.stringify(cart))
-                updateCartAmount()
-            }
+  const addToCartButtons = document.querySelectorAll("#add-to-cart");
+  addToCartButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const productName = button.parentElement.firstChild.nextSibling.innerText;
+      // Gå igenom listan av alla produkter (listofProducts) och filtrera bort allt förutom
+      // den produkt man vill ha
+      const [foundProduct] = listOfProducts.filter(
+        (item) => item.title == productName
+      );
 
-        })
-   })
+      // Kolla först om kundkorgen existerar i localstorage
+      if (!localStorage.getItem("cart")) {
+        // Skapa en tom array om det inte finns något i localstorage
+        const items = [];
+        // Lägg till produkten man klickat på
+        items.push(foundProduct);
+        // Om det inte fanns någon "cart" i localStorage så skapar vi en helt ny med vår product
+        localStorage.setItem("cart", JSON.stringify(items));
+        updateCartAmount();
+      } else {
+        // Däremot om localStorage har en "cart" redan så ska vi bara lägga till den nya produkten
+        // Hämta den först
+        const cart = JSON.parse(localStorage.getItem("cart"));
+        // Lägg till den nya produkten
+        cart.push(foundProduct);
+        // Uppdatera localStorage
+        localStorage.setItem("cart", JSON.stringify(cart));
+        updateCartAmount();
+      }
+    });
+  });
 }
