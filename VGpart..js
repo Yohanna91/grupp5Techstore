@@ -118,5 +118,7 @@ function uppdatera_skärmen() {
         registrera.style.display = "block"
     }
 }
-
-        //KNYTA IHOP EN ORDER MED EN SPECIFIK ANVÄNDARE
+        
+         
+        
+    
