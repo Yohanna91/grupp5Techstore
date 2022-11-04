@@ -19,6 +19,27 @@ function initSite() {
         alert("Thank you for your purchase! 🔥")
         localStorage.removeItem("cart")
         location.href = "/"
+        const listOfProducts = JSON.parse(localStorage.getItem("cart"))
+        const user = JSON.parse(localStorage.getItem("inloggad"))
+        const order = {
+            products: listOfProducts,
+            user: user.namn
+        }
+
+        if (!localStorage.getItem("orders")) {
+    
+            localStorage.setItem("orders", JSON.stringify([order]))
+        } else {
+            // Däremot om localStorage har en "cart" redan så ska vi bara lägga till den nya produkten
+            // Hämta den först
+            const orders = JSON.parse(localStorage.getItem("orders"))
+            // Lägg till den nya produkten
+            orders.push(order);
+            // Uppdatera localStorage
+            localStorage.setItem("orders", JSON.stringify(orders))
+        }
+
+
         
     })
 }
