@@ -17,14 +17,17 @@ function initSite() {
 
     complete_purchase.addEventListener("click", () => {
         alert("Thank you for your purchase! 🔥")
-        localStorage.removeItem("cart")
         location.href = "/"
         const listOfProducts = JSON.parse(localStorage.getItem("cart"))
         const user = JSON.parse(localStorage.getItem("inloggad"))
+        localStorage.removeItem("cart")
+
         const order = {
             products: listOfProducts,
             user: user.namn
         }
+
+             
 
         if (!localStorage.getItem("orders")) {
     

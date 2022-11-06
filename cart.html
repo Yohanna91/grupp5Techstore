@@ -6,7 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
     <script src="cart.js" defer></script>
+    <script src="/VGpart..js" defer></script>
     <script src="https://kit.fontawesome.com/97112cb48b.js" crossorigin="anonymous"></script>
     <title>Cart</title>
 
@@ -17,6 +19,28 @@
         <a href="index.html">
             <h1>TechStore</h1>
         </a>
+        <div>
+            <!--för inloggninssida-->
+            <div id="utloggad">
+                
+                <input type="text" id="namn" /> 
+                <input type="text" id="lösenord" /> 
+                <input type="submit" value="Logga in" id="loggain"/><br><br>
+                <p id="felmeddelande"></p>
+              </div>
+          
+              <div id="registrera">
+                
+                <input type="text" id="register_namn" placeholder="Önskat namn"/>
+                <input type="text" id="register_lösenord" placeholder="Välj ett lösenord"/>
+                <input type="submit" value="Registrera" id="registreraknapp" />
+              </div>
+          
+              <div id="inloggad">
+                <input type="submit" value="Logga ut" id="loggaut" />
+                <h1>Du är inloggad som <span id="inloggadsom"></span></h1>
+              </div>
+        </div>
         
 
         <a class="cartcontainer" href="./cart.html">
