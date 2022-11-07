@@ -218,17 +218,5 @@ width: 20rem;
 }
 }
 
-        /***FOR TABLETS (10 PHONE)***/
-    @media only screen and (max-width: 900px) {
-        *{
-            margin: auto;
-            padding: auto;
-            box-sizing: border-box;
-        }
-        main{
-            display: flex;
-            flex-wrap: wrap;
-        }
-     }
      
     
